@@ -1,5 +1,7 @@
 # Cloudcore React Frontend
 
+![CI](https://github.com/cloudcore-cms/cloudcore-react/actions/workflows/ci.yml/badge.svg)
+
 A Vite + React starter for [Cloudcore CMS](https://github.com/cloudcore-cms/cloudcore-cms).
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/cloudcore-cms/cloudcore-react)
