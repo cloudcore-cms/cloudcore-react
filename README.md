@@ -1,55 +1,42 @@
 # Cloudcore React Frontend
 
-A Vite + React starter for Cloudcore CMS.
+A Vite + React starter for [Cloudcore CMS](https://github.com/cloudcore-cms/cloudcore-cms).
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/cloudcore-cms/cloudcore-react)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/cloudcore-cms/cloudcore-react)
+[![Deploy to Cloudflare Pages](https://img.shields.io/badge/Deploy%20to-Cloudflare%20Pages-F38020?logo=cloudflare)](https://dash.cloudflare.com/?to=/:account/pages/new/provider/github)
 
 ## Quick Start
 
 ```bash
-# Install dependencies
 npm install
-
-# Configure CMS URL
-# Create .env file with:
-VITE_CMS_URL=http://localhost:8787/api/v1
-
-# Start development
+cp .env.example .env
+# Edit .env: set your CMS or Public API URL
 npm run dev
-```
-
-## Structure
-
-```
-src/
-├── components/
-│   ├── BlockRenderer.tsx    # Renders CMS content blocks
-│   └── Layout.tsx           # Base layout with header/footer
-├── lib/
-│   └── api.ts               # CMS API client
-├── routes/
-│   ├── Home.tsx             # Homepage
-│   ├── Blog.tsx             # Blog listing
-│   ├── BlogPost.tsx         # Single post
-│   └── Page.tsx             # Dynamic pages
-├── styles/
-│   └── globals.css
-├── App.tsx                  # Router setup
-└── main.tsx                 # Entry point
+# http://localhost:5173
 ```
 
 ## Environment Variables
 
 | Variable | Description |
-|----------|-------------|
-| `VITE_CMS_URL` | Cloudcore CMS API URL (default: `http://localhost:8787/api/v1`) |
+|---|---|
+| `VITE_CMS_URL` | Cloudcore API URL (default: `http://localhost:8787/api/v1`) |
 
-## Build & Deploy
+For production, point at the [Public API](https://github.com/cloudcore-cms/cloudcore-api) (e.g., `https://api.yourdomain.com`).
+
+## Deploy
 
 ```bash
-# Build
 npm run build
-
-# Preview
-npm run preview
+# Output in dist/
 ```
 
-Deploy the `dist/` folder to any static hosting.
+**Cloudflare Pages:** `npx wrangler pages deploy dist`
+
+**Vercel:** Click the button above or `npx vercel`
+
+**Netlify:** Click the button above or `npx netlify deploy --build`
+
+## License
+
+MIT
